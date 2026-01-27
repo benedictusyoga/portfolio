@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IoMdArrowRoundDown } from "react-icons/io";
 import './Home.css'
 
 export default function Home() {
@@ -7,9 +8,9 @@ export default function Home() {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
-        setTimeout(()=> setShowIngenuity(true), 100);
-        setTimeout(()=> setShowCreativity(true), 600);
-        setTimeout(()=> setShowButton(true), 1100);
+        setTimeout(()=> setShowIngenuity(true), 200);
+        setTimeout(()=> setShowCreativity(true), 1000);
+        setTimeout(()=> setShowButton(true), 2000);
     }, []);
 
     return (
@@ -17,17 +18,21 @@ export default function Home() {
             <section className="hero">
                 <div className="hero-content">
                     <h1 className="hero-title">
-                        <span className={`ingenuity ${showIngenuity ? 'animate-fade-in-up' : ''}`}>
-                            INGENUITY
-                        </span>
-                        <span className={`creativity ${showCreativity ? 'animate-fade-in-up' : ''}`}>
-                            creativity
-                        </span>
+                        <div className="word-container">
+                            <span className={`ingenuity ${showIngenuity ? 'animate-fade-in-up' : ''}`}>
+                                INGENUITY,
+                            </span>
+                        </div>
+                        <div className="word-container">
+                            <span className={`creativity ${showCreativity ? 'animate-fade-in-up' : ''}`}>
+                                creativity
+                            </span>
+                        </div>
                     </h1>
-                    <button className={`hero-button ${showButton ? 'animate-fade-in-up' : ''}`}>
-                        More ↓
-                    </button>
                 </div>
+                    <button className={`hero-button ${showButton ? 'animate-fade-in-up' : ''}`}>
+                        More <IoMdArrowRoundDown />
+                    </button>
             </section>
         </div>
     );

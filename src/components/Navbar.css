@@ -13,7 +13,7 @@
     justify-content: space-between;
 }
 
-.navbar-logo .logo-placeholder{
+.navbar-logo .logo-placeholder {
     width: 20px;
     height: 20px;
     background-color: var(--text-color);
@@ -21,17 +21,64 @@
 
 .navbar-links {
     display: flex;
-    gap: 0.75rem;
+    gap: var(--space-md);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    align-items: center;
 }
 
 .navbar-links a {
     color: var(--text-color);
     font-family: var(--font-secondary);
     font-style: italic;
-} 
+    font-size: var(--text-md);
+    position: relative;
+    text-decoration: none;
+}
+
+.navbar-links a:not(.cv-link)::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-base);
+}
+
+.navbar-links a:not(.cv-link):hover::after {
+    transform: scaleX(0.4);
+}
+
+.cv-link {
+    font-family: var(--font-primary) !important;
+    font-style: normal !important;
+    font-weight: var(--font-bold) !important;
+    font-size: var(--text-xs) !important;
+    background-color: var(--text-color);
+    color: var(--bg-color) !important;
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    cursor: pointer;
+    transition: opacity var(--transition-base);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+}
+
+.cv-link:hover {
+    opacity: 0.8;
+}
+
+.cv-link svg {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
 
 .theme-toggle .toggle-placeholder {
     width: 50px;

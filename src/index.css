@@ -2,16 +2,16 @@
 
 :root {
   --bg-color: #F3F2F0;
+  --bg-color-secondary: #222222;
   --text-color: #222222;
   --text-secondary: #949494;
-  --border-color: #222222;
   --accent-color: #98149C;
 
-  --bg-color-dark: #1a1a1a;
-  --text-color-dark: #ffffff;
+  --bg-color-dark: #222222;
+  --bg-color-secondary-dark: #000000;
+  --text-color-dark: #F3F2F0;
   --text-secondary-dark: #a0a0a0;
-  --border-color-dark: #333333;
-  --accent-color-dark: #ffffff;
+  --accent-color-dark: #98149C;
 
   --font-primary: 'Lato', sans-serif;
   --font-secondary: 'Libre Baskerville', serif;

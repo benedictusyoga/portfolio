@@ -11,12 +11,8 @@
 .navbar-container {
     display: flex;
     justify-content: space-between;
-}
-
-.navbar-logo .logo-placeholder {
-    width: 20px;
-    height: 20px;
-    background-color: var(--text-color);
+    align-items: center;
+    /* Add this line to vertically align everything */
 }
 
 .navbar-links {

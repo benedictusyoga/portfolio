@@ -1,0 +1,46 @@
+.animated-logo {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.logo-container {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square {
+    width: 18px;
+    height: 18px;
+    background-color: var(--text-color);
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Initial state - all squares stacked as one */
+.square-top-left,
+.square-top-right,
+.square-bottom {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+/* Hovered state - squares spread out to form Corner/L-shape */
+/* Top left square (Pivot) */
+.logo-container.hovered .square-top-left {
+    transform: translate(-75%, -75%) rotate(45deg);
+}
+
+/* Top right square */
+.logo-container.hovered .square-top-right {
+    transform: translate(75%, -75%) rotate(45deg);
+}
+
+/* Bottom square (moved to left to form column) */
+.logo-container.hovered .square-bottom {
+    transform: translate(-75%, 75%) rotate(45deg);
+}

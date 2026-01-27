@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import './Home.css'
+import About from "../components/About";
 
 export default function Home() {
     const [showIngenuity, setShowIngenuity] = useState(false);
@@ -12,6 +13,13 @@ export default function Home() {
         setTimeout(() => setShowCreativity(true), 1000);
         setTimeout(() => setShowButton(true), 2000);
     }, []);
+
+    const scrollToAbout = () => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     return (
         <div className="home">
@@ -31,11 +39,12 @@ export default function Home() {
                     </h1>
                 </div>
                 <div className={`hero-button-wrapper ${showButton ? 'animate-fade-in-up' : ''}`}>
-                    <button className="hero-button">
+                    <button className="hero-button" onClick={scrollToAbout}>
                         More <IoMdArrowRoundDown />
                     </button>
                 </div>
             </section>
+            <About />
         </div>
     );
 }

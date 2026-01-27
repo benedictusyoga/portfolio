@@ -1,0 +1,30 @@
+import React from 'react';
+import './About.css';
+import benedictImage from '../assets/self-portrait.png';
+import { IoMdArrowRoundForward } from "react-icons/io";
+
+const About: React.FC = () => {
+    return (
+        <section className="about-section" id="about">
+            <div className="about-container">
+                <div className="about-image-wrapper">
+                    <img src={benedictImage} alt="Benedict" className="about-image" />
+                    <div className="image-fade-overlay"></div>
+                </div>
+                <div className="about-content">
+                    <h2 className="about-greeting">HI, I'M</h2>
+                    <h1 className="about-name">benedict</h1>
+                    <p className="about-description">
+                        AS A <strong>PROGRAMMER</strong>, I COMBINE INGENUITY<br />
+                        AND CREATIVITY TO DISSOLVE BOUNDARIES
+                    </p>
+                    <button className="read-more-btn">
+                        Read More About Me <IoMdArrowRoundForward />
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default About;

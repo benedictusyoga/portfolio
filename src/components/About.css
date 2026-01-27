@@ -36,8 +36,9 @@
     max-width: 100%;
     object-fit: contain;
     position: absolute;
-    bottom: -5%;
-    left: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
     filter: grayscale(100%);
 }
 
@@ -58,7 +59,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 5rem;
+    padding-left: 2rem;
     gap: var(--space-xl);
     z-index: 10;
 }
@@ -82,7 +83,7 @@
 
 .about-name {
     font-family: var(--font-secondary);
-    font-size: var(--text-6xl);
+    font-size: var(--text-8xl);
     font-weight: 400;
     font-style: italic;
     color: var(--text-color);
@@ -136,7 +137,11 @@
     }
 
     .about-image {
-        left: 0;
+        left: 50%;
+    }
+
+    .about-content {
+        padding-left: 2rem;
     }
 }
 
@@ -158,9 +163,12 @@
     .about-image {
         position: relative;
         bottom: 0;
-        left: 0;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
         max-height: 100%;
         margin: 0 auto;
+        height: auto;
     }
 
     .about-content {

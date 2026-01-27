@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { HiOutlineDownload } from "react-icons/hi";
 import AnimatedLogo from './AnimatedLogo';
+import ThemeToggle from './ThemeToggle';
 import './Navbar.css'
 
 export default function Navbar() {
@@ -25,7 +26,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="theme-toggle">
-                    <div className="toggle-placeholder"></div>
+                    <ThemeToggle />
                 </div>
             </div>
         </nav>

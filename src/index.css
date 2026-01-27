@@ -5,12 +5,14 @@
   --bg-color-secondary: #222222;
   --text-color: #222222;
   --text-secondary: #949494;
+  --text-tertiary: #f3f2f0;
   --accent-color: #98149C;
 
   --bg-color-dark: #222222;
   --bg-color-secondary-dark: #000000;
   --text-color-dark: #F3F2F0;
   --text-secondary-dark: #a0a0a0;
+  --text-tertiary-dark: #f3f2f0;
   --accent-color-dark: #98149C;
 
   --font-primary: 'Lato', sans-serif;
@@ -36,9 +38,9 @@
 
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
-  --space-md: 1rem;
-  --space-lg: 1.5rem;
-  --space-xl: 2rem;
+  --space-md: 0.75rem;
+  --space-lg: 1.2rem;
+  --space-xl: 1.75rem;
   --space-2xl: 3rem;
   --space-3xl: 4rem;
   --space-4xl: 6rem;
@@ -49,6 +51,15 @@
 
   --z-navbar: 1000;
   --z-modal: 2000;
+}
+
+/* Dark theme overrides */
+[data-theme='dark'] {
+  --bg-color: var(--bg-color-dark);
+  --bg-color-secondary: var(--bg-color-secondary-dark);
+  --text-color: var(--text-color-dark);
+  --text-secondary: var(--text-secondary-dark);
+  --accent-color: var(--accent-color-dark);
 }
 
 * {

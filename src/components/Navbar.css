@@ -55,8 +55,8 @@
     font-style: normal !important;
     font-weight: var(--font-bold) !important;
     font-size: var(--text-xs) !important;
-    background-color: var(--text-color);
-    color: var(--bg-color) !important;
+    background-color: var(--bg-color-secondary);
+    color: var(--text-tertiary) !important;
     padding: var(--space-sm) var(--space-md);
     border: none;
     cursor: pointer;
@@ -74,12 +74,4 @@
 .cv-link svg {
     font-size: 1.2em;
     vertical-align: middle;
-}
-
-.theme-toggle .toggle-placeholder {
-    width: 50px;
-    height: 26px;
-    border-radius: 13px;
-    border: 1px solid var(--border-color);
-    background-color: #000000;
 }

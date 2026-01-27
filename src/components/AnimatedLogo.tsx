@@ -11,13 +11,8 @@ export default function AnimatedLogo() {
             onMouseLeave={() => setIsHovered(false)}
         >
             <div className={`logo-container ${isHovered ? 'hovered' : ''}`}>
-                {/* Top left square */}
                 <div className="square square-top-left"></div>
-
-                {/* Top right square */}
                 <div className="square square-top-right"></div>
-
-                {/* Bottom center square */}
                 <div className="square square-bottom"></div>
             </div>
         </div>

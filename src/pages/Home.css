@@ -94,4 +94,9 @@
 .hero-button svg {
     font-size: 1.2em;
     vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.hero-button:hover svg {
+    transform: translateY(4px);
 }

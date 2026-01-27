@@ -115,6 +115,11 @@
 .read-more-btn svg {
     font-size: 1.2em;
     vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.read-more-btn:hover svg {
+    transform: translateX(4px);
 }
 
 @media (max-width: 1024px) {

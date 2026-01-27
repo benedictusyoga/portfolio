@@ -2,6 +2,7 @@
 
 :root {
   --bg-color: #F3F2F0;
+  --bg-color-rgb: 243, 242, 240;
   --bg-color-secondary: #222222;
   --text-color: #222222;
   --text-secondary: #949494;
@@ -9,6 +10,7 @@
   --accent-color: #98149C;
 
   --bg-color-dark: #222222;
+  --bg-color-dark-rgb: 34, 34, 34;
   --bg-color-secondary-dark: #000000;
   --text-color-dark: #F3F2F0;
   --text-secondary-dark: #a0a0a0;
@@ -53,9 +55,9 @@
   --z-modal: 2000;
 }
 
-/* Dark theme overrides */
 [data-theme='dark'] {
   --bg-color: var(--bg-color-dark);
+  --bg-color-rgb: var(--bg-color-dark-rgb);
   --bg-color-secondary: var(--bg-color-secondary-dark);
   --text-color: var(--text-color-dark);
   --text-secondary: var(--text-secondary-dark);

@@ -63,6 +63,33 @@
     opacity: 0.8;
 }
 
+.popup-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--bg-color-secondary);
+    color: var(--text-tertiary);
+    padding: 0.8rem 1.5rem;
+    margin-top: 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all var(--transition-base);
+}
+
+.popup-action-btn:hover {
+    opacity: 0.6;
+    color: var(--text-tertiary);
+}
+
+.popup-action-btn svg {
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;

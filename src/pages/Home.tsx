@@ -8,9 +8,9 @@ export default function Home() {
     const [showButton, setShowButton] = useState(false);
 
     useEffect(() => {
-        setTimeout(()=> setShowIngenuity(true), 200);
-        setTimeout(()=> setShowCreativity(true), 1000);
-        setTimeout(()=> setShowButton(true), 2000);
+        setTimeout(() => setShowIngenuity(true), 200);
+        setTimeout(() => setShowCreativity(true), 1000);
+        setTimeout(() => setShowButton(true), 2000);
     }, []);
 
     return (
@@ -30,9 +30,11 @@ export default function Home() {
                         </div>
                     </h1>
                 </div>
-                    <button className={`hero-button ${showButton ? 'animate-fade-in-up' : ''}`}>
+                <div className={`hero-button-wrapper ${showButton ? 'animate-fade-in-up' : ''}`}>
+                    <button className="hero-button">
                         More <IoMdArrowRoundDown />
                     </button>
+                </div>
             </section>
         </div>
     );

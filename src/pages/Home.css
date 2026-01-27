@@ -63,8 +63,12 @@
     opacity: 0;
 }
 
-.hero-button {
+.hero-button-wrapper {
     margin-top: var(--space-3xl);
+    opacity: 0;
+}
+
+.hero-button {
     background-color: var(--bg-color-secondary);
     color: var(--text-tertiary);
     padding: var(--space-md) var(--space-lg);
@@ -72,15 +76,14 @@
     cursor: pointer;
     font-family: var(--font-primary);
     font-size: var(--text-sm);
-    transition: opacity var(--transition-base);
+    transition: all var(--transition-base);
     display: flex;
     align-items: center;
     gap: var(--space-xs);
-    opacity: 0;
 }
 
 .hero-button:hover {
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .hero-button svg {

@@ -38,6 +38,7 @@ const ProjectDetail: React.FC = () => {
                 </button>
 
                 <div className="detail-header">
+                    <span className="project-year" style={{ fontSize: '1rem' }}>{project.year}</span>
                     <h1 className="detail-title">{project.title}</h1>
                     <p className="detail-description">{project.shortDescription}</p>
 

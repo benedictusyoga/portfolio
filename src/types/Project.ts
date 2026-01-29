@@ -1,7 +1,14 @@
-export interface ProjectStep {
-    stepTitle: string;
-    description: string;
-    image: string;
+export interface ProjectLink {
+    label: string;
+    url: string;
+    type: 'github' | 'live' | 'figma' | 'other';
+}
+
+export interface ProjectInsights {
+    impact: string[];
+    novelty: string[];
+    challenges: string[];
+    learnings: string[];
 }
 
 export interface Project {
@@ -13,6 +20,7 @@ export interface Project {
     isFeatured?: boolean;
     year: string;
     thumbnail: string;
-    story: ProjectStep[];
+    links: ProjectLink[];
+    insights: ProjectInsights;
     gradient?: string;
 }

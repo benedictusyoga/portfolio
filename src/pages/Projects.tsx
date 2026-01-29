@@ -2,13 +2,12 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { BsArrowUpRight, BsPeopleFill, BsPersonFill, BsArrowLeft } from "react-icons/bs";
-import '../components/ProjectsSection.css'; // Reuse card styles
-import './Projects.css'; // Page specific styles
+import '../components/ProjectsSection.css';
+import './Projects.css';
 
 const Projects: React.FC = () => {
     const navigate = useNavigate();
 
-    // Scroll to top on mount
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -35,6 +34,7 @@ const Projects: React.FC = () => {
                             key={project.id}
                             className="project-card"
                             style={{ '--card-gradient': project.gradient } as React.CSSProperties}
+                            onClick={() => navigate(`/projects/${project.id}`)}
                         >
                             <div className="project-card-image">
                                 <img src={project.thumbnail} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

@@ -25,6 +25,7 @@ const ProjectsSection: React.FC = () => {
                             key={project.id}
                             className="project-card"
                             style={{ '--card-gradient': project.gradient } as React.CSSProperties}
+                            onClick={() => navigate(`/projects/${project.id}`)}
                         >
                             <div className="project-card-image">
                                 <img src={project.thumbnail} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

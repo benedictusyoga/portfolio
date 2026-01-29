@@ -159,6 +159,17 @@
     color: var(--text-color);
 }
 
+.project-year {
+    display: block;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+}
+
 .tech-stack-scroll {
     display: flex;
     flex-wrap: wrap;

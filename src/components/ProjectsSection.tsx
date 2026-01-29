@@ -1,11 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ProjectsSection.css';
 import { projects } from '../data/projects';
 import { BsArrowUpRight, BsPeopleFill, BsPersonFill } from "react-icons/bs";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 const ProjectsSection: React.FC = () => {
-    const featuredProjects = projects.filter(p => p.isFeatured);
+    const navigate = useNavigate();
+    const featuredProjects = projects
+        .filter(p => p.isFeatured)
+        .sort((a, b) => parseInt(b.year) - parseInt(a.year));
 
     return (
         <section className="projects-section" id="projects">
@@ -29,6 +33,7 @@ const ProjectsSection: React.FC = () => {
                             <div className="project-card-content">
                                 <BsArrowUpRight className="project-arrow" />
                                 <div className="project-info">
+                                    <span className="project-year">{project.year}</span>
                                     <h3 className="project-title">{project.title}</h3>
                                     <p className="project-desc">{project.shortDescription}</p>
 
@@ -49,7 +54,7 @@ const ProjectsSection: React.FC = () => {
                     ))}
                 </div>
 
-                <button className="see-all-btn">
+                <button className="see-all-btn" onClick={() => navigate('/projects')}>
                     See All My Projects <IoMdArrowRoundForward />
                 </button>
             </div>

@@ -11,6 +11,7 @@ export interface Project {
     techStack: string[];
     isGroupProject: boolean;
     isFeatured?: boolean;
+    year: string;
     thumbnail: string;
     story: ProjectStep[];
     gradient?: string;

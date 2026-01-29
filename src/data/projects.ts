@@ -9,6 +9,7 @@ export const projects: Project[] = [
         techStack: ['React', 'Swift'],
         isGroupProject: false,
         isFeatured: true,
+        year: '2023',
         thumbnail: 'placeholder',
         gradient: 'linear-gradient(135deg, #7c3aed 0%, transparent 60%)',
         story: [
@@ -31,6 +32,19 @@ export const projects: Project[] = [
         techStack: ['React', 'Node', 'PostgreSQL'],
         isGroupProject: true,
         isFeatured: true,
+        year: '2024',
+        thumbnail: comeandfixImage,
+        gradient: 'linear-gradient(135deg, #ea580c 0%, transparent 60%)',
+        story: []
+    },
+    {
+        id: 'cococo',
+        title: 'COCO.CO - iOS Application Redesign',
+        shortDescription: "A redesign of an iOS application based on the industry standards.",
+        techStack: ['Swift', 'Figma'],
+        isGroupProject: true,
+        isFeatured: false,
+        year: '2023',
         thumbnail: comeandfixImage,
         gradient: 'linear-gradient(135deg, #ea580c 0%, transparent 60%)',
         story: []

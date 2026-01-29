@@ -34,7 +34,7 @@ const ProjectDetail: React.FC = () => {
         <div className="project-detail-page">
             <div className="project-detail-container">
                 <button className="back-btn" onClick={() => navigate(-1)}>
-                    <BsArrowLeft /> Back to My Projects
+                    <BsArrowLeft /> Back
                 </button>
 
                 <div className="detail-header">

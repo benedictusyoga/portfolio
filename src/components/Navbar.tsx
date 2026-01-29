@@ -38,7 +38,7 @@ export default function Navbar() {
                 <div className="navbar-links">
                     <Link to="/">home</Link>
                     <Link to="/projects">projects</Link>
-                    <a href="#contact" onClick={handleContactClick}>contact</a>
+                    <a href="#contact" onClick={handleContactClick}>connect</a>
                     <a
                         href="/BENEDICTUS YOGATAMA FAVIAN SATYAJATI.pdf"
                         className="cv-link"

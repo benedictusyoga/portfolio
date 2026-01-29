@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { projects } from '../../data/projects';
+import type { ProjectGalleryItem } from '../../types/Project';
 import { BsArrowLeft, BsGithub, BsGlobe, BsPeopleFill, BsPersonFill } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
@@ -10,6 +11,7 @@ import '../../components/ProjectsSection.css';
 const ProjectDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
+    const [selectedImage, setSelectedImage] = useState<ProjectGalleryItem | null>(null);
 
     const project = projects.find(p => p.id === id);
 
@@ -117,7 +119,33 @@ const ProjectDetail: React.FC = () => {
                         </div>
                     )}
                 </div>
+
+                {project.gallery && project.gallery.length > 0 && (
+                    <div className="gallery-section">
+                        <h2 className="gallery-header">Gallery</h2>
+                        <div className="gallery-grid">
+                            {project.gallery.map((item, index) => (
+                                <div key={index} className="gallery-card" onClick={() => setSelectedImage(item)}>
+                                    <img src={item.image} alt="Gallery" className="gallery-image" />
+                                    <div className="gallery-overlay">
+                                        <p className="gallery-text">{item.description}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
+
+            {selectedImage && (
+                <div className="gallery-modal-overlay" onClick={() => setSelectedImage(null)}>
+                    <div className="gallery-modal-content" onClick={(e) => e.stopPropagation()}>
+                        <button className="gallery-modal-close" onClick={() => setSelectedImage(null)}>&times;</button>
+                        <img src={selectedImage.image} alt="Gallery Full" className="gallery-modal-image" />
+                        <p className="gallery-modal-text">{selectedImage.description}</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

@@ -1,5 +1,7 @@
 import type { Project } from '../types/Project';
 import comeandfixImage from '../assets/comeandfix.png';
+import benedictImage from '../assets/benedict.png';
+import selfPortraitImage from '../assets/self-portrait.png';
 
 export const projects: Project[] = [
     {
@@ -33,7 +35,25 @@ export const projects: Project[] = [
                 'Deepened understanding of iOS Core Audio framework.',
                 'Learned importance of user-centric design for expectant mothers.'
             ]
-        }
+        },
+        gallery: [
+            {
+                image: comeandfixImage,
+                description: "Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+            },
+            {
+                image: benedictImage,
+                description: 'Another sample dummy text description for the gallery item featuring a different asset.'
+            },
+            {
+                image: selfPortraitImage,
+                description: 'A third example of gallery content using a self portrait asset.'
+            },
+            {
+                image: comeandfixImage,
+                description: 'Final gallery item description reusing an asset.'
+            }
+        ]
     },
     {
         id: 'come-and-fix',

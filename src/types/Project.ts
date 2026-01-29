@@ -11,6 +11,11 @@ export interface ProjectInsights {
     learnings: string[];
 }
 
+export interface ProjectGalleryItem {
+    image: string;
+    description: string;
+}
+
 export interface Project {
     id: string;
     title: string;
@@ -22,5 +27,6 @@ export interface Project {
     thumbnail: string;
     links: ProjectLink[];
     insights: ProjectInsights;
+    gallery?: ProjectGalleryItem[];
     gradient?: string;
 }

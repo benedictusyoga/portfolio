@@ -1,30 +1,22 @@
 import React from 'react';
 import './ProjectsSection.css';
 import { projects } from '../data/projects';
-import { FaReact, FaNodeJs, FaPython, FaJava } from 'react-icons/fa';
-import { SiTypescript, SiJavascript } from 'react-icons/si';
-import { BsArrowUpRight } from "react-icons/bs";
-
-const iconMap: { [key: string]: React.ReactNode } = {
-    'React': <FaReact />,
-    'Node': <FaNodeJs />,
-    'Python': <FaPython />,
-    'Java': <FaJava />,
-    'TypeScript': <SiTypescript />,
-    'JavaScript': <SiJavascript />
-};
+import { BsArrowUpRight, BsPeopleFill, BsPersonFill } from "react-icons/bs";
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 const ProjectsSection: React.FC = () => {
+    const featuredProjects = projects.filter(p => p.isFeatured);
+
     return (
         <section className="projects-section" id="projects">
             <div className="projects-container">
                 <div className="projects-header">
-                    <h2 className="projects-title-primary">CREATION</h2>
-                    <h2 className="projects-title-secondary">highlights</h2>
+                    <h2 className="projects-title-primary">FEATURED</h2>
+                    <h2 className="projects-title-secondary">projects</h2>
                 </div>
 
                 <div className="projects-grid">
-                    {projects.map((project) => (
+                    {featuredProjects.map((project) => (
                         <div
                             key={project.id}
                             className="project-card"
@@ -38,14 +30,27 @@ const ProjectsSection: React.FC = () => {
                                 <div className="project-info">
                                     <h3 className="project-title">{project.title}</h3>
                                     <p className="project-desc">{project.shortDescription}</p>
-                                    <div className="project-tech-icon" style={{ marginTop: '0.5rem', fontSize: '1.2rem' }}>
-                                        {iconMap[project.mainTech]}
+
+                                    <div className="project-meta">
+                                        <div className="project-type-indicator">
+                                            {project.isGroupProject ? <BsPeopleFill /> : <BsPersonFill />}
+                                        </div>
+
+                                        <div className="tech-stack-scroll">
+                                            {project.techStack.map((tech) => (
+                                                <span key={tech} className="tech-pill">{tech}</span>
+                                            ))}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
+
+                <button className="see-all-btn">
+                    See All My Projects <IoMdArrowRoundForward />
+                </button>
             </div>
         </section>
     );

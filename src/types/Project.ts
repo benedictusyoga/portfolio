@@ -8,7 +8,9 @@ export interface Project {
     id: string;
     title: string;
     shortDescription: string;
-    mainTech: string;
+    techStack: string[];
+    isGroupProject: boolean;
+    isFeatured?: boolean;
     thumbnail: string;
     story: ProjectStep[];
     gradient?: string;

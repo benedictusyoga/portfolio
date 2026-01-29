@@ -4,8 +4,10 @@ export const projects: Project[] = [
     {
         id: 'tiny',
         title: 'TINY',
-        shortDescription: "Hear your baby's heartbeat!",
-        mainTech: 'React',
+        shortDescription: "A pregnancy-companion app that helps families capture the little one's precious moments.",
+        techStack: ['React', 'Swift'],
+        isGroupProject: false,
+        isFeatured: true,
         thumbnail: 'placeholder',
         gradient: 'linear-gradient(135deg, #7c3aed 0%, transparent 60%)',
         story: [
@@ -24,8 +26,10 @@ export const projects: Project[] = [
     {
         id: 'come-and-fix',
         title: 'COME&FIX',
-        shortDescription: "Get your appliances fixed fast!",
-        mainTech: 'Node',
+        shortDescription: "A web application that helps homeowners quickly look for handymen in their local area.",
+        techStack: ['React', 'Node', 'PostgreSQL'],
+        isGroupProject: true,
+        isFeatured: true,
         thumbnail: 'placeholder',
         gradient: 'linear-gradient(135deg, #ea580c 0%, transparent 60%)',
         story: []
@@ -34,7 +38,8 @@ export const projects: Project[] = [
         id: 'tiny-2',
         title: 'TINY',
         shortDescription: "Hear your baby's heartbeat!",
-        mainTech: 'React',
+        techStack: ['React'],
+        isGroupProject: false,
         thumbnail: 'placeholder',
         gradient: 'linear-gradient(135deg, #2563eb 0%, transparent 60%)',
         story: []
@@ -43,7 +48,8 @@ export const projects: Project[] = [
         id: 'come-and-fix-2',
         title: 'COME&FIX',
         shortDescription: "Get your appliances fixed fast!",
-        mainTech: 'Node',
+        techStack: ['Node'],
+        isGroupProject: true,
         thumbnail: 'placeholder',
         gradient: 'linear-gradient(135deg, #16a34a 0%, transparent 60%)',
         story: []

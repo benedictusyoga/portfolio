@@ -17,7 +17,6 @@
     gap: var(--space-3xl);
 }
 
-/* Header Styles matching Experience/About style */
 .projects-header {
     text-align: center;
     display: flex;
@@ -46,67 +45,50 @@
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-direction: column;
     gap: var(--space-2xl);
     width: 100%;
-    max-width: 900px;
+    max-width: 800px;
 }
 
 .project-card {
-    background-color: var(--bg-color-secondary);
-    height: 220px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--space-2xl);
     position: relative;
     cursor: pointer;
-    overflow: hidden;
-    transition: transform var(--transition-base), box-shadow var(--transition-base);
-    --gradient: linear-gradient(135deg, var(--accent-color), transparent 60%);
-}
-
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    background: var(--card-gradient, var(--gradient));
-    opacity: 0.8;
-    z-index: 1;
-    pointer-events: none;
-}
-
-.project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    align-items: center;
 }
 
 .project-card-image {
-    width: 40%;
-    height: calc(100% - 2 * var(--space-md));
+    width: 100%;
+    aspect-ratio: 1/1;
     background-color: #d1d5db;
     position: relative;
-    margin: var(--space-md);
-    z-index: 2;
+    transition: transform var(--transition-base);
+}
+
+.project-card:hover .project-card-image {
+    transform: scale(0.98);
 }
 
 .project-card-content {
-    flex: 1;
-    padding: var(--space-md) var(--space-lg) var(--space-md) 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     position: relative;
-    z-index: 2;
+    height: 100%;
+    justify-content: center;
+    padding-top: var(--space-xl);
 }
 
 .project-arrow {
     position: absolute;
-    top: var(--space-md);
-    right: var(--space-md);
-    color: var(--text-tertiary);
-    font-size: var(--text-lg);
+    top: 0;
+    right: 0;
+    color: var(--text-color);
+    font-size: 1.5rem;
     transition: transform var(--transition-base);
 }
 
@@ -115,29 +97,88 @@
 }
 
 .project-info {
-    color: var(--text-tertiary);
+    color: var(--text-color);
 }
 
 .project-title {
     font-family: var(--font-primary);
-    font-size: var(--text-xl);
+    font-size: var(--text-3xl);
     font-weight: var(--font-black);
     text-transform: uppercase;
-    margin-bottom: var(--space-xs);
-    line-height: 1.1;
+    margin-bottom: var(--space-sm);
+    line-height: 1;
 }
 
 .project-desc {
     font-family: var(--font-primary);
-    font-size: var(--text-xs);
-    opacity: 0.7;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--space-lg);
+    max-width: 400px;
 }
 
-.project-tech-icon {
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.project-type-indicator {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.tech-stack-scroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.tech-pill {
+    background-color: #e5e5e5;
+    color: #222;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+[data-theme='dark'] .tech-pill {
+    background-color: #333;
+    color: #fff;
+}
+
+.see-all-btn {
+    margin-top: var(--space-2xl);
+    background-color: var(--bg-color-secondary);
     color: var(--text-tertiary);
-    opacity: 0.8;
+    padding: var(--space-md) var(--space-lg);
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: var(--text-sm);
+    transition: all var(--transition-base);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.see-all-btn:hover {
+    opacity: 0.6;
+}
+
+.see-all-btn svg {
+    font-size: 1.2em;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.see-all-btn:hover svg {
+    transform: translateX(4px);
 }
 
 @media (max-width: 768px) {

@@ -23,6 +23,7 @@ const ProjectsSection: React.FC = () => {
                             style={{ '--card-gradient': project.gradient } as React.CSSProperties}
                         >
                             <div className="project-card-image">
+                                <img src={project.thumbnail} alt={project.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 <div className="card-overlay"></div>
                             </div>
                             <div className="project-card-content">

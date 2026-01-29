@@ -1,4 +1,5 @@
 import type { Project } from '../types/Project';
+import comeandfixImage from '../assets/comeandfix.png';
 
 export const projects: Project[] = [
     {
@@ -30,28 +31,8 @@ export const projects: Project[] = [
         techStack: ['React', 'Node', 'PostgreSQL'],
         isGroupProject: true,
         isFeatured: true,
-        thumbnail: 'placeholder',
+        thumbnail: comeandfixImage,
         gradient: 'linear-gradient(135deg, #ea580c 0%, transparent 60%)',
-        story: []
-    },
-    {
-        id: 'tiny-2',
-        title: 'TINY',
-        shortDescription: "Hear your baby's heartbeat!",
-        techStack: ['React'],
-        isGroupProject: false,
-        thumbnail: 'placeholder',
-        gradient: 'linear-gradient(135deg, #2563eb 0%, transparent 60%)',
-        story: []
-    },
-    {
-        id: 'come-and-fix-2',
-        title: 'COME&FIX',
-        shortDescription: "Get your appliances fixed fast!",
-        techStack: ['Node'],
-        isGroupProject: true,
-        thumbnail: 'placeholder',
-        gradient: 'linear-gradient(135deg, #16a34a 0%, transparent 60%)',
         story: []
     }
 ];

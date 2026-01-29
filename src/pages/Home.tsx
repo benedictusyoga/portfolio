@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import './Home.css'
 import About from "../components/About";
+import ProjectsSection from "../components/ProjectsSection";
 
 export default function Home() {
     const [showIngenuity, setShowIngenuity] = useState(false);
@@ -45,6 +46,7 @@ export default function Home() {
                 </div>
             </section>
             <About />
+            <ProjectsSection />
         </div>
     );
 }

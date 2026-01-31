@@ -1,7 +1,7 @@
 export interface ProjectLink {
     label: string;
     url: string;
-    type: 'github' | 'live' | 'figma' | 'other';
+    type: 'github' | 'live' | 'figma' | 'testflight' | 'other';
 }
 
 export interface ProjectInsights {

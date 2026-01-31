@@ -5,6 +5,7 @@ import type { ProjectGalleryItem, Story } from '../../types/Project';
 import { BsArrowLeft, BsGithub, BsGlobe, BsPeopleFill, BsPersonFill, BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { FaFigma } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import { SiApple } from "react-icons/si";
 import './ProjectDetail.css';
 import '../../components/ProjectsSection.css';
 
@@ -75,6 +76,7 @@ const ProjectDetail: React.FC = () => {
             case 'github': return <BsGithub />;
             case 'live': return <BsGlobe />;
             case 'figma': return <FaFigma />;
+            case 'testflight': return <SiApple />;
             default: return <FiExternalLink />;
         }
     };

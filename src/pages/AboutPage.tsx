@@ -48,6 +48,8 @@ const ExperienceCard: React.FC<{ item: ExperienceItem }> = ({ item }) => {
 const AboutPage: React.FC = () => {
     const navigate = useNavigate();
 
+    const [isBioExpanded, setIsBioExpanded] = useState(false);
+
     return (
         <div className="about-page">
             <div className="about-page-container">
@@ -65,17 +67,23 @@ const AboutPage: React.FC = () => {
                         </div>
                         <div className="profile-identity">
                             <h2 className="profile-name">benedictus yogatama</h2>
-                            <h3 className="profile-role">Software Developer</h3>
+                            <h3 className="profile-role">SOFTWARE DEVELOPER</h3>
                         </div>
                     </div>
 
                     <div className="profile-bio-section">
-                        <p className="profile-bio">
-                            I am a Software Developer based in Indonesia. I build and ship software for websites
+                        <p className={`profile-bio ${isBioExpanded ? 'expanded' : ''}`}>
+                            I am a <strong>Software Developer</strong> based in Indonesia. I build and ship software for websites
                             and iOS devices that solves real-world problems.
                             As a developer, I build products that prioritizes scalability and accessibility. I am a true
                             believer of developing for a clean and maintainable codebase.
                         </p>
+                        <button
+                            className="bio-toggle-btn"
+                            onClick={() => setIsBioExpanded(!isBioExpanded)}
+                        >
+                            {isBioExpanded ? 'Show Less' : 'Read More'}
+                        </button>
                     </div>
                 </div>
 

@@ -16,14 +16,14 @@ export default function Navbar() {
         setIsCvPopupOpen(true);
     };
 
-    const handleContactClick = (e: React.MouseEvent) => {
+    const handleScroll = (e: React.MouseEvent, id: string) => {
         e.preventDefault();
         if (location.pathname === '/') {
-            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
         } else {
             navigate('/');
             setTimeout(() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
             }, 300);
         }
     };
@@ -31,14 +31,14 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <div className="navbar-logo">
+                <Link to="/" className="navbar-logo">
                     <AnimatedLogo />
-                </div>
+                </Link>
 
                 <div className="navbar-links">
-                    <Link to="/">home</Link>
-                    <Link to="/projects">projects</Link>
-                    <a href="#contact" onClick={handleContactClick}>connect</a>
+                    <a href="#about" onClick={(e) => handleScroll(e, 'about')}>about</a>
+                    <a href="#projects" onClick={(e) => handleScroll(e, 'projects')}>projects</a>
+                    <a href="#contact" onClick={(e) => handleScroll(e, 'contact')}>connect</a>
                     <a
                         href="/BENEDICTUS YOGATAMA FAVIAN SATYAJATI.pdf"
                         className="cv-link"

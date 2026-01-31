@@ -43,4 +43,18 @@ export const experiences: ExperienceItem[] = [
     }
 ];
 
-export const uniqueSkills = ["React", "Swift", "TypeScript", "Node.js", "CSS", "HTML", "Git", "Figma", "Xcode", "Firebase"];
+export const uniqueSkills = [
+    "Swift",
+    "SQL",
+    "Java",
+    "C/C++",
+    "PHP/Laravel",
+    "REST APIs",
+    "AWS",
+    "Azure",
+    "Railway",
+    "Xcode",
+    "Xcode Cloud",
+    "AppStore Connect",
+    "GitHub & Actions"
+];

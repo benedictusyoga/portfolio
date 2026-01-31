@@ -27,6 +27,17 @@ export interface Project {
     thumbnail: string;
     links: ProjectLink[];
     insights: ProjectInsights;
+    stories?: Story[];
     gallery?: ProjectGalleryItem[];
     gradient?: string;
+}
+
+export interface Story {
+    id: string;
+    category: string;
+    title: string;
+    description: string;
+    image?: string;
+    challenges?: string[];
+    learnings?: string[];
 }

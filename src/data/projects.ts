@@ -36,6 +36,46 @@ export const projects: Project[] = [
                 'Learned importance of user-centric design for expectant mothers.'
             ]
         },
+        stories: [
+            {
+                id: 's1',
+                category: '1 - tech talks',
+                title: 'BUILDING WHILE EXPLORING',
+                description: "While building TINY, our team really puts forward the importance of exploration of new technologies and knowledge along our processes.\n\nThe sound of unfamiliar tech stacks we've never used or even heard before becomes a driving force that keeps us going.",
+                image: benedictImage
+            },
+            {
+                id: 's2',
+                category: '2 - tech talks',
+                title: 'ANOTHER TECH STORY',
+                description: "This is a placeholder for another story to demonstrate the expandable list capability.",
+                image: undefined
+            },
+            {
+                id: 's3',
+                category: '3 - my contributions',
+                title: 'MY CONTRIBUTIONS',
+                description: "Here I would talk about my specific contributions to the project...",
+                image: undefined
+            },
+            {
+                id: 's4',
+                category: '4 - takeaways',
+                title: 'COLLABORATION MEANS COLLABORATING',
+                description: "\"Duh... Everybody knows collaboration means collaborating\", you may say. But sometimes, people think that collaboration just means we work together with other people. But from this project, I really understood that collaborating means seeing from differing perspectives, finding the silver lining of clouded judgements together, and most importantly: understanding each other. A ship may go through a rough wave, but WE ARE a part of that ship!",
+                challenges: [
+                    "Putting ourselves in the user's (expectant parents') shoes. Mainly because none of the team was pregnant.",
+                    "Cross-functional communications regarding requirements.",
+                    "Communication with user because of physical limitations like distance and time."
+                ],
+                learnings: [
+                    "Collaboration means collaborating.",
+                    "Knowledge on Firebase, CI/CD pipelines, clean code.",
+                    "Pitching and presenting.",
+                    "In-depth research process, including interviews with relevant subjects."
+                ]
+            }
+        ],
         gallery: [
             {
                 image: comeandfixImage,

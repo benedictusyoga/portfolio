@@ -46,10 +46,10 @@
 }
 
 .about-title {
-    font-family: var(--font-secondary);
-    font-style: italic;
+    font-family: var(--font-primary);
     font-size: var(--text-6xl);
     font-weight: var(--font-black);
+    text-transform: uppercase;
     color: var(--text-color);
     line-height: 1;
 }
@@ -57,7 +57,7 @@
 .profile-intro-container {
     display: flex;
     flex-direction: column;
-    gap: var(--space-xl);
+    gap: var(--space-md);
     width: 100%;
 }
 
@@ -91,13 +91,14 @@
 }
 
 .profile-name {
-    font-family: var(--font-primary);
-    font-size: var(--text-3xl);
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-size: var(--text-5xl);
     font-weight: 900;
-    text-transform: uppercase;
     color: var(--text-color);
     line-height: 1.1;
     margin-bottom: 0;
+    letter-spacing: -3%;
 }
 
 .profile-role {
@@ -129,14 +130,14 @@
 .section-label {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
+    gap: var(--space-md);
     flex-wrap: wrap;
 }
 
 .section-label-text {
     font-family: var(--font-primary);
     font-size: var(--text-lg);
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     color: var(--text-color);
     white-space: nowrap;

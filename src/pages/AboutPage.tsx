@@ -64,7 +64,7 @@ const AboutPage: React.FC = () => {
                             <img src={headshotImage} alt="Benedictus Yogatama" className="profile-portrait" />
                         </div>
                         <div className="profile-identity">
-                            <h2 className="profile-name">BENEDICTUS YOGATAMA</h2>
+                            <h2 className="profile-name">benedictus yogatama</h2>
                             <h3 className="profile-role">Software Developer</h3>
                         </div>
                     </div>
@@ -72,7 +72,7 @@ const AboutPage: React.FC = () => {
                     <div className="profile-bio-section">
                         <p className="profile-bio">
                             I am a Software Developer based in Indonesia. I build and ship software for websites
-                            and iOS devices that solves real-world problems.<br /><br />
+                            and iOS devices that solves real-world problems.
                             As a developer, I build products that prioritizes scalability and accessibility. I am a true
                             believer of developing for a clean and maintainable codebase.
                         </p>

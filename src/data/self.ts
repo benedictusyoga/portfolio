@@ -32,24 +32,6 @@ export const experiences: ExperienceItem[] = [
             }
         ],
         logo: appleLogo
-    },
-    {
-        id: 2,
-        company: "Apple Developer Academy",
-        role: "Junior iOS Developer",
-        period: "Jan 2025 - Dec 2025",
-        details: [
-            {
-                description: "iOS Developer for various cohort projects focusing on health and utility apps.",
-                points: [
-                    "Collaborated with cross-functional teams to design and implement user-centric iOS applications",
-                    "Utilized SwiftUI and UIKit to build responsive and accessible user interfaces",
-                    "Conducted user research and usability testing to iterate on product features",
-                    "Mentored junior peers in Swift programming best practices"
-                ]
-            }
-        ],
-        logo: appleLogo
     }
 ];
 

@@ -29,6 +29,14 @@ export const experiences: ExperienceItem[] = [
                     "Supervised code architecture and quality standards for maintainable codebase",
                     "Contributed to the development logic including sound processing logic using audio and interface frameworks"
                 ]
+            },
+            {
+                description: "Machine learning and iOS developer - Telly, a BISINDO sign language learning app",
+                points: [
+                    "Developed a BISINDO machine learning classifier model with an average F1-Score of 0.88",
+                    "Gathered primary datasets for training and testing purposes of the machine learning model",
+                    "Implemented the machine learning model to the iOS application"
+                ]
             }
         ],
         logo: appleLogo

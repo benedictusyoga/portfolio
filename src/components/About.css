@@ -98,7 +98,6 @@
     line-height: 1.6;
     letter-spacing: 2%;
     color: var(--text-color);
-    text-transform: uppercase;
     margin: 0;
     max-width: 500px;
 }

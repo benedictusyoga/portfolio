@@ -21,8 +21,8 @@ const About: React.FC = () => {
                         <h1 className="about-name">benedict</h1>
                     </div>
                     <p className="about-description">
-                        AS A <strong><i>PROGRAMMER</i></strong>, I COMBINE <i>INGENUITY</i><br />
-                        AND <i>CREATIVITY</i>{" "}TO DISSOLVE <i>BOUNDARIES</i>
+                        As a <strong><i>Developer</i></strong>, I combine <i>INGENUITY</i><br />
+                        and <i>CREATIVITY</i>{" "}to dissolve <i>BOUNDARIES</i>
                     </p>
                     <button className="read-more-btn" onClick={() => navigate('/about')}>
                         Read More About Me <IoMdArrowRoundForward />
